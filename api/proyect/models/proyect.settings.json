@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proyects",
+  "info": {
+    "name": "proyect",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "publication": {
+      "type": "date"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "publicated": {
+      "type": "boolean"
+    },
+    "link": {
+      "type": "string"
+    },
+    "photo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "proyects"
+    },
+    "categories": {
+      "collection": "category"
+    }
+  }
+}

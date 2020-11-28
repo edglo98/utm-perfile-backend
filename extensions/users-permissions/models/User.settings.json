@@ -60,8 +60,8 @@
       "configurable": false
     },
     "proyects": {
-      "via": "users",
       "collection": "proyect",
+      "via": "users",
       "dominant": true
     },
     "biography": {
@@ -80,6 +80,23 @@
       "type": "string"
     },
     "github": {
+      "type": "string"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "richtext"
+    },
+    "lastname": {
       "type": "string"
     }
   }

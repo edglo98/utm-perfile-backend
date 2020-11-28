@@ -38,9 +38,9 @@
       "required": false
     },
     "users": {
+      "via": "proyects",
       "plugin": "users-permissions",
-      "collection": "user",
-      "via": "proyects"
+      "collection": "user"
     },
     "categories": {
       "collection": "category"
